@@ -1,0 +1,237 @@
+h2 {
+    text-align: center;
+    color: lightskyblue;
+}
+
+section {
+    position: relative;
+}
+
+section:before {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    border-left: 20px solid lightskyblue;
+    border-top: 20px solid lightskyblue;
+}
+
+.btn {
+    text-align: center;
+    background-color: white;
+    color: lightskyblue;
+    border: 1px solid lightskyblue;
+    border-radius: 3px;
+    width: 100px;
+    height: 50px;
+    float: right;
+}
+
+.btn:hover {
+    background-color: white;
+    color: lightskyblue;
+    border-color: lightskyblue;
+}
+
+.flex-2-col {
+    display: flex;
+}
+
+.padding-medium {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.padding-medium ol li {
+    list-style: lower-alpha;
+}
+
+.padding-medium ol li:hover:before {
+    content: ">";
+    font-weight: bold;
+}
+
+.tm-nav-item-link:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.tm-banner {
+    border: 25px solid lightskyblue;
+    padding: 0;
+    border-image: linear-gradient(to right, lightskyblue, burlywood 100%) 1;
+}
+
+.tm-banner-inner {
+    border: none;
+}
+
+.tm-banner-text {
+    text-shadow: 5px 5px 3px #333;
+    animation: moveInRight 4s ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.tm-section-description {
+    text-indent: 25px;
+    line-height: 30px;
+}
+
+.tm-section-title-box:hover {
+    background-color: lightgrey;
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+.blocks .tm-section-description:nth-child(2),
+.blocks .tm-section-title {
+    align-self: flex-start;
+}
+
+.blocks .tm-section-description:last-child {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-style: italic;
+}
+
+.carousel-description {
+    text-align: center;
+}
+
+.box p::first-letter {
+    font-weight: bold;
+}
+
+#contact .tm-section-title {
+    align-self: flex-start;
+}
+
+#contact_name,
+#contact_email,
+#contact_subject {
+    border-bottom: 1px solid lightskyblue;
+}
+
+#contact_message {
+    border: 1px solid lightskyblue;
+    background: url("../img/email-icon.png") no-repeat right 10px bottom 10px;
+    background-size: 30px;
+}
+
+#contact_name:focus,
+#contact_email:focus {
+    background-color: lightskyblue;
+}
+
+.tm-main-nav,
+section,
+.tm-content-header {
+    box-shadow: 2px 1px 10px 1px rgba(61, 55, 61, 0.7);
+}
+
+.box-work {
+    padding: 10px;
+}
+
+.box-work:nth-child(2n+1) h2 {
+    color: white;
+}
+
+.box-work:nth-child(2n+1) {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.tm-content-box .text {
+    position: relative;
+}
+
+.tm-content-box .text:after {
+    content: "New";
+    color: red;
+    position: absolute;
+    bottom: 8px;
+    font-weight: bold;
+    font-size: 8px;
+}
+
+@media print {
+    #about,
+    #contact,
+    .tm-sidebar,
+    .tm-team-img,
+    .boxes,
+    .img-fluid,
+    .carousel-indicators,
+    section:before,
+    .text:after {
+        display: none;
+    }
+    #about {
+        margin: 0;
+    }
+    .tm-main-content,
+    section,
+    .padding-medium,
+    .carousel {
+        padding: 0;
+    }
+    section:before,
+    .text:after {
+        content: "";
+    }
+    .padding-medium ol {
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .padding-medium ol li {
+        list-style: none;
+    }
+    .padding-medium ol li:nth-child(2n+1) {
+        text-align: right;
+    }
+    .tm-team-description-container {
+        max-width: 600px;
+    }
+    .tm-main-content,
+    .tm-content-box {
+        width: 600px;
+    }
+    .tm-banner {
+        border: 1px solid silver;
+        border-image: none;
+    }
+    .tm-banner-text {
+        animation: none;
+    }
+    .tm-content-box {
+        margin: 0;
+    }
+    .tm-section-description {
+        text-indent: 10px;
+        text-align: center;
+        line-height: 25px;
+    }
+    .blocks .tm-section-title {
+        align-self: center;
+    }
+    .tm-section-title {
+        margin: 20px 0 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .tm-footer {
+        padding: 0;
+    }
+}
